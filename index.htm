@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="GDPR_styles.css">
+  <title>GDPR Test Page</title>
+</head>
+<body>
+
+<h1>GDPR Test Page</h1>
+<p><strong>Note: </strong>This does not work locally in Chrome.</p>
+<p>To see the notice again, manually refresh the page and click <button id="reset_GDPR_notice">Reset cookie</button>
+</p>
+
+<script>
+  // this is just for the test page
+  document.getElementById('reset_GDPR_notice').addEventListener("click", function(){
+      document.cookie = "show_GDPR=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+      location.reload(); // refresh page
+    });
+</script>
+
+<script src="GDPR_notice.js"></script>
+<!-- Load main.js last -->
+<script src="main.js"></script>
+
+</body>
+</html>
